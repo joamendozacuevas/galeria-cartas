@@ -1,18 +1,48 @@
-# React + Vite
+# Galeria de cartas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto creado con React y Vite para la Tarea 1 de React. La aplicacion muestra una galeria de cartas usando componentes, props, listas con `.map()`, renderizado condicional y eventos.
 
-Currently, two official plugins are available:
+## Link de publicacion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://joamendozacuevas.github.io/galeria-cartas/
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Renderiza 6 cartas desde un arreglo de objetos.
+- Usa el componente `Carta` con props: `nombre`, `tipo`, `poder` y `emoji`.
+- Recorre el arreglo `cartas` con `.map()` y asigna una `key` unica.
+- Muestra la etiqueta `⚡ LEGENDARIA` solo cuando el poder de la carta es mayor a 80.
+- Incluye un boton `Ver carta` que muestra un `alert` con el nombre de la carta elegida.
+- Agrega un contador de likes por carta usando `useState`.
+- Usa estilos propios en `App.css` e `index.css`.
 
-Note: This will impact Vite dev & build performances.
+## Tecnologias usadas
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- CSS
+- JavaScript
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como ejecutar el proyecto
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+Crear version de produccion:
+
+```bash
+npm run build
+```
+
+## Publicacion
+
+El proyecto esta preparado para publicarse en GitHub Pages desde la rama `main` usando GitHub Actions. Cada vez que se suban cambios a `main`, se genera la carpeta `dist` y se publica automaticamente.
